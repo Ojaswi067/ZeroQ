@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZeroQ - Face Scan Billing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>ZeroQ ⚡</h1>
+    <p class="tagline">Facial Scan Checkout | No More Queues</p>
+
+    <!-- User Registration Modal -->
+    <div id="registrationModal" class="modal">
+      <div class="modal-content">
+        <h2>Welcome to ZeroQ</h2>
+        <p>Enter your details to personalize your experience:</p>
+        <input type="text" id="userName" placeholder="Name">
+        <input type="email" id="userEmail" placeholder="Email">
+        <input type="text" id="userUPI" placeholder="UPI ID">
+        <input type="number" id="userCredits" placeholder="Wallet Credits (₹)">
+        <select id="userLanguage">
+          <option value="en">English</option>
+          <option value="hi">Hindi</option>
+          <option value="mr">Marathi</option>
+        </select>
+        <button id="saveUserBtn">Save & Continue</button>
+      </div>
+    </div>
+
+    <button id="scanBtn">🚀 Scan Face to Checkout</button>
+    <button id="viewTransactionsBtn">📜 View Transactions</button>
+    <button id="checkBalanceBtn">💰 Check Wallet Balance</button>
+
+    <div id="invoiceCard" class="card" style="display:none;">
+      <h2 id="welcomeMsg"></h2>
+      <p id="invoiceId"></p>
+      <div id="itemsList"></div>
+      <button id="addItemBtn">➕ Add Item</button>
+      <p id="totalAmount"></p>
+      <button id="payBtn">💸 Pay Now (UPI)</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
